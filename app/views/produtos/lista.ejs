@@ -1,14 +1,20 @@
 <html>
- <body>
-  <table>
-   <tr>
-    <td>id</td>
-    <td>nome</td>
-   </tr>
-   <tr>
-    <td>1</td>
-    <td>livro de node</td>
-   </tr>
-  </table>
- </body>
+    <body>
+        <table>
+            <tr>
+                <td>id</td>
+                <td>titulo</td>
+                <td>descrição</td>
+                <td>preço</td>
+            </tr>
+            <% for(var i = 0; i < lista.length; i++) { %>
+                <tr>
+                    <td><%=lista[i].id%></td>
+                    <td><%=lista[i].titulo%></td>
+                    <td><%=lista[i].descricao%></td>
+                    <td><%=lista[i].preco%></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
 </html>
