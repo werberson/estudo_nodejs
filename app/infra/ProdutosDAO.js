@@ -6,6 +6,6 @@ ProdutosDAO.prototype.lista = function (callback) {
     this._connection.query('select * from usuarios', callback)
 };
 
-modules.exports = function () {
+module.exports = function () {
     return ProdutosDAO;
 };
