@@ -6,5 +6,13 @@ module.exports = function (app) {
             resp.render('produtos/lista', {lista : resultado});
         });
         connection.end();
-    })
+    });
+    app.get('/produtos/form', function (req, resp) {
+       resp.render('produtos/form')
+    });
+    app.post('/produtos/salva', function (req, resp) {
+        var produto = req.body;
+        console.log(produto);
+        resp.render('produtos/lista');
+    });
 };
